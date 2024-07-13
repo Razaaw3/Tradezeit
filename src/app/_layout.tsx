@@ -21,7 +21,7 @@ export default function RootLayout() {
   return (
     <LoadAssets assets={images} fonts={fonts} >
       <Stack screenOptions={{headerShown:false}}>
-        <Stack.Screen name='auth' />
+        <Stack.Screen name='(auth)' />
       </Stack>
         
     </LoadAssets>

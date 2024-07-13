@@ -1,13 +1,23 @@
+import CustomModal from '@/components/Modal/CustomModal';
+import { interSemiBold32 } from '@/constants/Fonts';
+import { StylesConstants } from '@/constants/StylesConstants';
 import { Link } from 'expo-router';
+import React, { useState } from 'react';
 import { Image, StyleSheet, View,Text, TouchableOpacity } from 'react-native';
 
 
 
 export default function HomeScreen() {
+  const [visible, setVisible] = useState(false);
+
+  const showModal = () => setVisible(true);
+  const hideModal = () => setVisible(false);
+
   return (
-   <Link href={'./auth'}>
-    <Text>sjadhkasjdhkasjhdjkashdkjash</Text>
-   </Link>
+   <View style={StylesConstants.mainContainer}>
+      <Text style={[interSemiBold32(),{marginTop:112}]} onPress={showModal}>sad</Text>
+      <CustomModal visible={visible} hideModal={hideModal} />
+   </View>
   );
 }
 

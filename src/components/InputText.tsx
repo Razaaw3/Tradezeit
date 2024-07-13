@@ -9,7 +9,8 @@ const InputText = (props:TextInputProps) => {
   return (
     <TextInput
         {...props}
-        style={styles.input}
+        style={[styles.input,props.style]}
+        placeholderTextColor={Colors.textColor}
     />
   )
 }
@@ -21,7 +22,9 @@ const styles = StyleSheet.create({
     borderWidth:1,
     borderColor : Colors.inputBorderColor,
     width:'100%',
-    paddingVertical:11,
-    ...interRegular16()
+    paddingVertical:13,
+    ...interRegular16(),
+    paddingHorizontal:16,
+    borderRadius : 8
   }
 })

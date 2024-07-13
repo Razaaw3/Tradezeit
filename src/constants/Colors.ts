@@ -28,5 +28,7 @@ export const Colors = {
   background : '#000000',
   textColor : '#EFF2FF',
   buttonColor : '#60A5FA',
-  inputBorderColor : '#404040'
+  inputBorderColor : '#404040',
+  textBlack : '#404040',
+  modalBorderColor : '#64748B'
 };
