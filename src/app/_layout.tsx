@@ -4,8 +4,7 @@ import 'react-native-reanimated';
 
 import LoadAssets from '@/components/LoadAssets';
 import images from '@/assets/images/index';
-import { Text, View } from 'react-native';
-// Prevent the splash screen from auto-hiding before asset loading is complete.
+
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -21,7 +20,7 @@ export default function RootLayout() {
   return (
     <LoadAssets assets={images} fonts={fonts} >
       <Stack screenOptions={{headerShown:false}}>
-        <Stack.Screen name='(auth)' />
+        <Stack.Screen name="(tabs)" />
       </Stack>
         
     </LoadAssets>

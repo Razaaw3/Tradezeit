@@ -7,6 +7,10 @@ export const StylesConstants = StyleSheet.create({
         flex : 1,
         paddingHorizontal:15
     },
+    simpleContainer:{
+        backgroundColor : Colors.background,
+        flex : 1,
+    },
 
     colALLCenter : {
         justifyContent:'center',

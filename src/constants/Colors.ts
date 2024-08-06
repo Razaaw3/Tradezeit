@@ -25,10 +25,35 @@ export const Colors = {
   // },
 
 
-  background : '#000000',
+  background : '#16202A',
   textColor : '#EFF2FF',
   buttonColor : '#60A5FA',
   inputBorderColor : '#404040',
   textBlack : '#404040',
-  modalBorderColor : '#64748B'
+  modalBorderColor : '#64748B',
+
+
+  supportingBackground : '#1c2939',
+  disabled : '#454545',
+  primary : '#0f62fe',
+  disabledPrimary : '#2c497a',
+  secondary: '#EFF2FF',
+  disabledSecondary : '#A7A7A7',
+  supportingRed : '#AE444B',
+  redLoss : '#DB5057',
+  backgroundRed : '#FFDEDE',
+  greenProfit : '#27b376',
+  supportingGreen : '#138E59',
+  backgroundGreen : '#E6F9E7',
+  tertiary : '#FFB921',
+  primaryBlue : '#0B84FE',
+  disabledWhite : '#888888',
+  disabledBlue : '#2C497A',
+  disabledBlack : '#404040',
+  secondaryWhite : '#EEF2FF'
+
+
+
+
+
 };
