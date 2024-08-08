@@ -1,4 +1,3 @@
-import CustomModal from '@/components/Modal/CustomModal';
 import { interSemiBold32 } from '@/constants/Fonts';
 import { StylesConstants } from '@/constants/StylesConstants';
 import { Link } from 'expo-router';
@@ -16,7 +15,7 @@ export default function HomeScreen() {
   return (
    <View style={StylesConstants.mainContainer}>
       <Text style={[interSemiBold32(),{marginTop:112}]} onPress={showModal}>sad</Text>
-      <CustomModal visible={visible} hideModal={hideModal} />
+      {/* <CustomModal visible={visible} hideModal={hideModal} /> */}
    </View>
   );
 }

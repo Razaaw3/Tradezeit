@@ -23,6 +23,14 @@ export const interSemiBold12 = (color: ColorValue = Colors.textColor)=> ({
     lineHeight : 16
 })
 
+export const interSemiBold14 = (color: ColorValue = Colors.textColor)=> ({
+    fontFamily:'interSemiBold',
+    fontSize : 14,
+    color : color,
+    lineHeight : 20
+})
+
+
 export const interRegular16 = (color: ColorValue = Colors.textColor)=> ({
     fontFamily:'interRegular',
     fontSize : 16,

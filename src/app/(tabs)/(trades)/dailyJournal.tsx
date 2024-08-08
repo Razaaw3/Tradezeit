@@ -1,15 +1,25 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
+import React, { useCallback, useRef, useState } from 'react'
 import JournalCard from '@/components/Trades/DailyJournal/JournalCard'
 import { Ionicons } from '@expo/vector-icons'
 import { Colors } from '@/constants/Colors'
 import { StylesConstants } from '@/constants/StylesConstants'
 import SearchBar from '@/components/Trades/SearchBar'
+import BottomSheetScroll from '@/components/Modal/BottomSheetScroll'
+import TradePopup from '@/components/Trades/DailyJournal/TradePopup'
+import { BottomSheetScrollHandle } from '@/utils/types'
 
 type Props = {}
 
 const DailyJournal = (props: Props) => {
   const [searchVisible, setSearchVisible] = useState(false)
+  const bottomSheet =  useRef<BottomSheetScrollHandle>(null)
+
+  const HandleBottomSheet = useCallback(() =>{
+    bottomSheet.current?.handleBottomSheet()
+  },[])
+
+  
   return (
     <View style={StylesConstants.simpleContainer}>
       <View style={styles.searchContainer}>
@@ -18,8 +28,11 @@ const DailyJournal = (props: Props) => {
       </View>
       <FlatList
         data={[1,2,3,4]}
-        renderItem={()=><JournalCard/>}
+        renderItem={()=><JournalCard onPress={HandleBottomSheet}/>}
       />
+      <BottomSheetScroll ref={bottomSheet} >
+        <TradePopup />
+      </BottomSheetScroll>
     </View>
   )
 }

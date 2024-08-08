@@ -22,7 +22,7 @@ export interface TextProps extends RNTextProps {
   color?:  string | any;
 }
 
-export function Text(props: TextProps) {
+export function Typo(props: TextProps) {
   const {
     size,
     text,
@@ -46,7 +46,7 @@ export function Text(props: TextProps) {
     $styles.push($sizeStyles[size]);
   }
   if (color) {
-    $styles.push({ color: Colors.textColor });
+    $styles.push({ color: color });
   }
 
   return (
@@ -57,25 +57,18 @@ export function Text(props: TextProps) {
 }
 
 const $sizeStyles = {
-  8: { fontSize: 8, lineHeight: 12.79 } as TextStyle,
-  10: { fontSize: 10, lineHeight: 12.79 } as TextStyle,
-  12: { fontSize: 12, lineHeight: 13.79 } as TextStyle,
-  13: { fontSize: 13, lineHeight: 19.13 } as TextStyle,
-  14: { fontSize: 14, lineHeight: 16.09 } as TextStyle,
-  18: { fontSize: 18, lineHeight: 22.26 } as TextStyle,
-  16: { fontSize: 16, lineHeight: 19.5 } as TextStyle,
-  20: { fontSize: 20, lineHeight: 24.87 } as TextStyle,
-  22: { fontSize: 22, lineHeight: 27.35 } as TextStyle,
-  24: { fontSize: 24, lineHeight: 29.84 } as TextStyle,
-  26: { fontSize: 26, lineHeight: 32.32 } as TextStyle,
-  28: { fontSize: 28, lineHeight: 34.81 } as TextStyle,
-  30: { fontSize: 30, lineHeight: 37.29 } as TextStyle,
-  50: { fontSize: 50, lineHeight: 47.29 } as TextStyle,
+  'interSemiBold12': { fontSize: 12, lineHeight: 16 , fontFamily:'interSemiBold' } as TextStyle,
+  'interSemiBold14': { fontSize: 14, lineHeight: 20 , fontFamily:'interSemiBold' } as TextStyle,
+  'interRegular8': { fontSize: 8, lineHeight: 12, fontFamily:'interRegular' } as TextStyle,
+  'interRegular10': { fontSize: 10, lineHeight: 14, fontFamily:'interRegular' } as TextStyle,
+  'interMedium10': { fontSize: 10, lineHeight: 14,fontFamily:'interMedium', } as TextStyle,
+  'interMedium8': { fontSize: 8, lineHeight: 12, fontFamily:'interMedium', } as TextStyle,
+
 };
 
 const $baseStyle: StyleProp<TextStyle> = [
-  $sizeStyles['16'],
-  { color: Colors.textColor },
+  $sizeStyles['interMedium10'],
+  { color: Colors.secondaryWhite },
 ];
 
 const $presets = {

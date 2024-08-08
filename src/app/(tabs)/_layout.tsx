@@ -18,6 +18,7 @@ export default function TabLayout() {
         tabBarInactiveTintColor: Colors.disabledWhite,
         headerStyle:{backgroundColor:Colors.supportingBackground,borderColor:'red',borderBottomWidth:0},
         headerShadowVisible:false
+
       }}>
       <Tabs.Screen
         name="index"
@@ -33,6 +34,7 @@ export default function TabLayout() {
         name="(trades)"
         options={{
           title: 'Trades',
+          headerTitleStyle:{color:Colors.secondaryWhite},
           tabBarIcon: ({ color  }) => (
             <TradesIcon color={color} />
           ),
